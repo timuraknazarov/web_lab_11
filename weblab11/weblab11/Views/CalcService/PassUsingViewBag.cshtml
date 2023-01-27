@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "PassUsingViewBag - Backend1";
+}
+
+<h1>
+    PassUsingViewBag
+</h1>
+
+<p>
+    <b>Rand Value First:</b> @ViewBag.num1
+</p>
+<p>
+    <b>Rand Value Second:</b> @ViewBag.num2
+</p>
+<p>
+    <b>Add:</b>
+    @{
+        int add = ViewBag.num1 + ViewBag.num2;
+        <p>@ViewBag.num1 + @ViewBag.num2 = @add</p>
+    }
+</p>
+<p>
+    <b>Sub:</b>
+    @{
+        int sub = ViewBag.num1 - ViewBag.num2;
+        <p>@ViewBag.num1 - @ViewBag.num2 = @sub</p>
+    }
+</p>
+<p>
+    <b>Multi:</b>
+    @{
+        int multi = ViewBag.num1 * ViewBag.num2;
+        <p>@ViewBag.num1 * @ViewBag.num2 = @multi</p>
+    }
+</p>
+<p>
+    <b>Div:</b>
+    @if(ViewBag.num2 == 0)
+    {
+        <text> arifmetic error</text>
+    }
+    else
+    {
+        int div = ViewBag.num1 / ViewBag.num2;
+        <p>@ViewBag.num1 - @ViewBag.num2 = @div</p>
+    }
+</p>

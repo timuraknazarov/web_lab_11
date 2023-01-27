@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "PassUsingViewData - Backend1";
+}
+@{
+    int num1 = (int)ViewData["num1"];
+    int num2 = (int)ViewData["num2"];
+
+}
+
+<h1>
+    PassUsingViewData
+</h1>
+
+<p>
+    <b>Rand Value First:</b> <text>@num1</text>
+</p>
+<p>
+    <b>Rand Value Second:</b><text>@num2</text>
+</p>
+<p>
+    <b>Add:</b>
+    @{
+        int add = num1 + num2;
+        <p>@num1 + @num2 = @add</p>
+    }
+</p>
+<p>
+    <b>Sub:</b>
+    @{
+        int sub = num1 - num2;
+        <p>@num1 - @num2 = @add</p>
+    }
+</p>
+<p>
+    <b>Multi:</b>
+    @{
+        int multi = num1 * num2;
+        <p>@num1 * @num2 = @multi</p>
+    }
+</p>
+<p>
+    <b>Div:</b>
+    @if(num2 != 0){
+        double div = num1 / num2;
+        <p>@num1 / @num2 = @div</p>
+    }
+    else
+    {
+        <text>arifmetic error</text>
+    }
+</p>

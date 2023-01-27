@@ -1,0 +1,48 @@
+﻿@model ViewModel;
+@{
+    ViewData["Title"] = "PassUsingModel - Backend1";
+}
+
+    <h1>
+        PassUsingModel 
+    </h1>
+
+    <p>
+        <b>Rand Value First: </b> @Model.num1
+    </p>
+    <p>
+        <b>Rand Value Second: </b> @Model.num2
+    </p>
+    <p>
+        <b>Add:</b>
+        @{
+            int add = Model.num1 + Model.num2;
+            <p>@Model.num1 + @Model.num2 = @add</p>
+        }
+    </p>
+    <p>
+        <b>Sub:</b>
+    @{
+        int sub = Model.num1 - Model.num2;
+        <p>@Model.num1 - @Model.num2 = @sub</p>
+    }
+    </p>
+    <p>
+        <b>Multi:</b>
+     @{
+        int mul = Model.num1 * Model.num2;
+        <p>@Model.num1 * @Model.num2 = @mul</p>
+    }
+    </p>
+    <p>
+        <b>Div:</b> 
+    @if (Model.num2 == 0) 
+    {
+        <text> arifmeric error</text>
+    }
+    else
+    {
+        double div = Model.num1 / Model.num2;
+        <p> @Model.num1 / @Model.num2 = @div </p>
+    }
+    </p>

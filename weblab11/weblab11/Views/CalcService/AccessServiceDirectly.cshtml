@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "AccessServiceDirectly - Backend1";
+}
+
+@{
+    Random random = new();
+    int num1 = random.Next(0, 11);
+    int num2 = random.Next(0, 11);
+}
+
+<h1>
+    AccessServiceDirectly
+</h1>
+
+<p>
+    <b>Rand Value First:</b> @num1
+</p>
+<p>
+    <b>Rand Value Second:</b> @num2
+</p>
+<p>
+    <b>Add:</b>
+    @{
+        int add = num1 + num2;
+        <p>@num1 + @num2 = @add</p>
+    }
+</p>
+<p>
+    <b>Sub:</b>
+    @{
+        int sub = num1 - num2;
+        <p>@num1 - @num2 = @sub</p>
+    }
+</p>
+<p>
+    <b>Multi:</b>
+    @{
+        int multi = num1 * num2;
+        <p>@num1 * @num2 = @multi</p>
+    }
+</p>
+<p>
+    <b>Div:</b>
+    @if(num2 == 0)
+    {
+        <text>arifmetic error</text>
+    }
+    else
+    {
+        int div = num1 / num2;
+        <p>@num1 / @num2 = @div</p>
+    }
+</p>
